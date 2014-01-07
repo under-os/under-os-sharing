@@ -1,6 +1,6 @@
 module UnderOs
   class Sharing
-    VERSION = '0.0.0'
+    VERSION = '1.0.0'
 
     def initialize(options={})
       @options = options

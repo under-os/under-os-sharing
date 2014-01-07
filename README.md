@@ -11,13 +11,39 @@ sharing = UOS::Sharing.new
 sharing.share("Message", UIImage...)
 ```
 
-## Cocoapods
+By default this package will use all the matching services/apps that are currently registered against the iOS,
+but you can limit the number of options by specifying the black list with the `:exclue` option
 
-This package uses the cocoapods to add the `instagram` sharing functionality
-
-```
-gem install cocoapods
-pod setup
-gem install motion-cocapods
+```ruby
+sharing = UOS::Sharing.new(:exclude => %w[facebook email])
 ```
 
+Or you can specify the white list with the `:receivers` option
+
+```ruby
+sharing = UOS::Sharing.new(:receivers => %w[twitter message])
+```
+
+## List of supported services
+
+ * `instagram`
+ * `facebook`
+ * `twitter`
+ * `flickr`
+ * `vimeo`
+ * `weibo` - ask apple
+ * `message` - open up in the iMessage
+ * `email`
+ * `print`
+ * `copy`
+ * `contact` - open in the contacts app
+ * `save` - save to the photo album (for images)
+ * `reading` - add to the reading list
+ * `airdrop` - share via the airdrop
+
+
+## Copyright & License
+
+All code in this repository released under the terms of the MIT license
+
+Copyright (C) 2014 Nikolay Nemshilov
