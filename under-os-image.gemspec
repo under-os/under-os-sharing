@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}) { |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
 
-  gem.add_runtime_dependency 'under-os', '~> 0'#, path: '../under-os'
+  gem.add_runtime_dependency 'under-os'
 
-  gem.add_development_dependency 'rake', '~> 0'
+  gem.add_development_dependency 'rake'
 end

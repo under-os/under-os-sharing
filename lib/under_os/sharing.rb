@@ -8,7 +8,7 @@ module UnderOs
 
     def share(*objects, &block)
       controller = controller_for(items_from(objects))
-      UnderOs::App.navigation.current_page._
+      UnderOs::App.history.current_page._
         .presentViewController(controller, animated: true, completion: block)
     end
 
