@@ -7,7 +7,8 @@ module UnderOs
 
       def open(url, annotation=nil, &block)
         @callback   = block
-        @root_view  = UnderOs::App.navigation._.visibleViewController.view
+
+        @root_view  = UnderOs::App.history.current_page.navbar._.visibleViewController.view
 
         @controller = UIDocumentInteractionController.interactionControllerWithURL(url)
         @controller.annotation = annotation if annotation
